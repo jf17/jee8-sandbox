@@ -16,7 +16,15 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter writer = response.getWriter();
         try {
-            writer.println("<h2>Hello from <font color=\"#green\">HelloServlet</font></h2>");
+			writer.println("<!DOCTYPE html>");
+            writer.println("<html>");
+            writer.println("<head>");
+            writer.println("<title>Java EE 8. Hello, Servlet !</title>");            
+            writer.println("</head>");
+            writer.println("<body>");
+            writer.println("<h2>Hello from <font color=\"#green\">HelloServlet.java</font></h2>");
+			writer.println("</body>");
+            writer.println("</html>");
         } finally {
             writer.close();  
         }
